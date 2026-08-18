@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+/**
+ * Bảng màu lấy từ UI của game (UIScreenBuilder.cs): nâu đỏ #721515, hổ phách
+ * #ffcc65, kem #fff8e8. Trang quản trị dùng lại đúng ba màu đó để nhìn vào là
+ * biết mình đang sửa nội dung của game nào.
+ */
+@theme {
+  --color-maroon-50: #fdf3f3;
+  --color-maroon-100: #fbe4e4;
+  --color-maroon-200: #f7cccc;
+  --color-maroon-300: #efa8a8;
+  --color-maroon-400: #e07575;
+  --color-maroon-500: #cc4a4a;
+  --color-maroon-600: #a83232;
+  --color-maroon-700: #8a2525;
+  --color-maroon-800: #721515;
+  --color-maroon-900: #5d1414;
+  --color-maroon-950: #340808;
+
+  --color-amber-brand: #ffcc65;
+  --color-cream: #fff8e8;
+
+  --color-ink-50: #f7f6f4;
+  --color-ink-100: #eeebe6;
+  --color-ink-200: #ddd8d0;
+  --color-ink-300: #bdb5a8;
+  --color-ink-400: #948b7c;
+  --color-ink-500: #756c5f;
+  --color-ink-600: #5c554b;
+  --color-ink-700: #48423a;
+  --color-ink-800: #2f2b26;
+  --color-ink-900: #1c1916;
+
+  --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-ink-50);
+  color: var(--color-ink-900);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Ô nhập số: bỏ mũi tên tăng/giảm, bảng nào cũng gõ tay nhanh hơn bấm. */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* JSON trong nhật ký có thể rất dài; cho cuộn ngang thay vì phá vỡ bố cục. */
+.scroll-x {
+  overflow-x: auto;
+}
